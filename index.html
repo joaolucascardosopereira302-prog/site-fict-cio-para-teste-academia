@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IronFit Academia</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #111;
+      color: white;
+    }
+
+    header {
+      background: #000;
+      padding: 25px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 3px solid #ffcc00;
+    }
+
+    header h1 {
+      color: #ffcc00;
+      font-size: 30px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 25px;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #ffcc00;
+    }
+
+    .banner {
+      height: 520px;
+      background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
+      url("https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1400&q=80");
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: center;
+      padding: 0 10%;
+    }
+
+    .banner h2 {
+      font-size: 52px;
+      color: #ffcc00;
+      margin-bottom: 20px;
+    }
+
+    .banner p {
+      font-size: 22px;
+      max-width: 600px;
+      margin-bottom: 30px;
+    }
+
+    .btn {
+      background: #ffcc00;
+      color: #111;
+      padding: 15px 30px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: white;
+    }
+
+    section {
+      padding: 60px 10%;
+    }
+
+    .titulo {
+      text-align: center;
+      font-size: 36px;
+      color: #ffcc00;
+      margin-bottom: 40px;
+    }
+
+    .sobre {
+      text-align: center;
+      font-size: 18px;
+      line-height: 1.7;
+      color: #ddd;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 25px;
+    }
+
+    .card {
+      background: #1c1c1c;
+      padding: 30px;
+      border-radius: 15px;
+      text-align: center;
+      border: 1px solid #333;
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      border-color: #ffcc00;
+    }
+
+    .card h3 {
+      color: #ffcc00;
+      margin-bottom: 15px;
+    }
+
+    .planos {
+      background: #181818;
+    }
+
+    .preco {
+      font-size: 34px;
+      color: #ffcc00;
+      margin: 20px 0;
+    }
+
+    .contato {
+      text-align: center;
+    }
+
+    .contato p {
+      font-size: 18px;
+      margin: 10px 0;
+      color: #ddd;
+    }
+
+    footer {
+      background: #000;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      border-top: 3px solid #ffcc00;
+    }
+
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      nav a {
+        margin: 8px;
+      }
+
+      .banner h2 {
+        font-size: 36px;
+      }
+
+      .banner p {
+        font-size: 18px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>Pereira Fit</h1>
+    <nav>
+      <a href="#sobre">Sobre</a>
+      <a href="#modalidades">Modalidades</a>
+      <a href="#planos">Planos</a>
+      <a href="#contato">Contato</a>
+    </nav>
+  </header>
+
+  <section class="banner">
+    <div>
+      <h2>Supere seus limites</h2>
+      <p>Treine em uma academia moderna, com equipamentos completos e profissionais preparados para ajudar você.</p>
+      <a href="#planos" class="btn">Conheça os planos</a>
+    </div>
+  </section>
+
+  <section id="sobre">
+    <h2 class="titulo">Sobre a Academia</h2>
+    <p class="sobre">
+      A IronFit Academia foi criada para quem busca saúde, força, estética e qualidade de vida.
+      Contamos com estrutura completa, ambiente climatizado, professores qualificados e treinos
+      personalizados para todos os objetivos.
+    </p>
+  </section>
+
+  <section id="modalidades">
+    <h2 class="titulo">Modalidades</h2>
+
+    <div class="cards">
+      <div class="card">
+        <h3>Musculação</h3>
+        <p>Equipamentos modernos para treinos de força e hipertrofia.</p>
+      </div>
+
+      <div class="card">
+        <h3>Funcional</h3>
+        <p>Aulas dinâmicas para melhorar resistência, agilidade e condicionamento.</p>
+      </div>
+
+      <div class="card">
+        <h3>Cardio</h3>
+        <p>Esteiras, bikes e elípticos para melhorar sua performance.</p>
+      </div>
+
+      <div class="card">
+        <h3>Personal Trainer</h3>
+        <p>Acompanhamento individual para alcançar resultados mais rápidos.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="planos" class="planos">
+    <h2 class="titulo">Planos</h2>
+
+    <div class="cards">
+      <div class="card">
+        <h3>Plano Mensal</h3>
+        <p class="preco">R$ 99</p>
+        <p>Acesso à musculação durante todo o mês.</p>
+      </div>
+
+      <div class="card">
+        <h3>Plano Trimestral</h3>
+        <p class="preco">R$ 249</p>
+        <p>Economize treinando por 3 meses.</p>
+      </div>
+
+      <div class="card">
+        <h3>Plano Anual</h3>
+        <p class="preco">R$ 899</p>
+        <p>O melhor custo-benefício para treinar o ano todo.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contato" class="contato">
+    <h2 class="titulo">Contato</h2>
+    <p><strong>WhatsApp:</strong> (34) 000000000</p>
+    <p><strong>Endereço:</strong> Rua Jurassic Park, 88 - Terra do Nunca</p>
+    <p><strong>Instagram:</strong> @uu013883$</p>
+    <br>
+    <a href="https://wa.me/5534000000000" target="_blank" class="btn">
+      Chamar no WhatsApp
+    </a>
+  </section>
+
+  <footer>
+    <p>© 2026 IronFit Academia - Todos os direitos reservados</p>
+  </footer>
+
+</body>
+</html>
